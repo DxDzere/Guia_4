@@ -31,53 +31,55 @@ public class Ejercicio_de_la_guia_1 {
     
     public static String Codificador(String frase){
         String fraseCod = "";
+        int cont=0;
         
-        for (int i = 0; i < frase.length(); i++) {
-            switch(frase.substring(i, i+1).toLowerCase()){
+        do{
+            switch(frase.substring(cont, cont+1).toLowerCase()){
                 case "a":
-                    if(i==0){
+                    if(cont==0){
                         fraseCod="@";
                     }else{
-                        fraseCod.concat("@");
+                        fraseCod = fraseCod.concat("@");
                     }
                     break;
                 case "e":
-                    if(i==0){
+                    if(cont==0){
                         fraseCod="#";
                     }else{
-                        fraseCod.concat("#");
+                        fraseCod = fraseCod.concat("#");
                     }
                     break;
                 case "i":
-                    if(i==0){
+                    if(cont==0){
                         fraseCod="$";
                     }else{
-                        fraseCod.concat("$");
+                        fraseCod = fraseCod.concat("$");
                     }
                     break;
                 case "o":
-                    if(i==0){
+                    if(cont==0){
                         fraseCod="%";
                     }else{
-                        fraseCod.concat("%");
+                        fraseCod = fraseCod.concat("%");
                     }
                     break;
                 case "u":
-                    if(i==0){
+                    if(cont==0){
                         fraseCod="*";
                     }else{
-                        fraseCod.concat("*");
+                        fraseCod = fraseCod.concat("*");
                     }
                     break;
                 default:
-                    if(i==0){
-                        fraseCod=frase.substring(i, i+1);
+                    if(cont==0){
+                        fraseCod=frase.substring(cont, cont+1);
                     }else{
-                        fraseCod.concat(frase.substring(i, i+1));
+                        fraseCod = fraseCod.concat(frase.substring(cont, cont+1));
                     }
                     break;
             }
-        }
+            cont++;
+        }while(cont<frase.length());
         
         return fraseCod;
     }
