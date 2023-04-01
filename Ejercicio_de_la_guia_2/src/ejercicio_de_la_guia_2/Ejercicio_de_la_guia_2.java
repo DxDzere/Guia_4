@@ -12,7 +12,13 @@ import java.util.Scanner;
  * @author Zere
  */
 public class Ejercicio_de_la_guia_2 {
-
+    public static void esMultiplo(int n1, int n2){
+        if(n1%n2 == 0){
+            System.out.println("el numero "+n1+" es multiplo de "+n2);
+        }else{
+            System.out.println("el numero "+n1+" no es multiplo de "+n2);
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -25,6 +31,8 @@ public class Ejercicio_de_la_guia_2 {
         num1 = leer.nextInt();
         System.out.print("Numero 2: ");
         num2 = leer.nextInt();
+        
+        esMultiplo(num1,num2);
     }
     
 }
