@@ -30,7 +30,7 @@ public class Ejercicio_de_la_guia_1 {
     }
     
     public static String Codificador(String frase){
-        String fraseCod = "";
+        String fraseCod="";
         int cont=0;
         
         do{

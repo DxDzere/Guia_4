@@ -28,10 +28,11 @@ public class Ejercicio_3 {
                 break;
             case "yenes":
                 System.out.println(monto +" convertido a yenes es: "+ (monto*129.852));
+                break;
                
         }
     }
-    //161.46041541887595
+    
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         double monto;
